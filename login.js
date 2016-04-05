@@ -1,0 +1,19 @@
+$(document).ready(function(){
+    $(".b1").click(function(){
+        
+        $(".body").show();
+        $(".img").hide();
+        $(".b1").addClass('active');
+        $(".b2").addClass('default');
+        $(".b2").removeClass('active');
+        $(".b1").removeClass('default');
+   });
+});
+$(document).ready(function(){
+    $(".b2").click(function(){
+        $(".b2").addClass('active');
+        $(".b1").addClass('default');
+        $(".b1").removeClass('active');
+        $(".b2").removeClass('default');
+    });
+});
