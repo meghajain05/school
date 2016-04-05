@@ -38,10 +38,12 @@ $dbhost = 'localhost';
 					header("Location: admin.php");
 					}
 				elseif ($type==2) {
+					$_SESSION['username1'] = $username1;
 					header("Location: student.php");
 					}
 				elseif ($type==3) 
 					{
+					$_SESSION['username1'] = $username1;
 					header("Location: teacher.php");
 					}
 					exit;

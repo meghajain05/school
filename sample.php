@@ -29,21 +29,5 @@ else
 	echo "successfull";
 }
 }
-   /* $username1=$_POST['username1'];
-    $password1=$_POST['password1'];
-    $sql2="SELECT * FROM user";
-    $retval1 = mysql_query( $sql2, $conn );
-    while($row = mysql_fetch_array($retval1, MYSQL_ASSOC)){
-    	
-		if ($username1==$row['U_Name'] && $password1==$row['Password']) {
-    	echo "Login successfull";
-   			 }
- 		
- 		else{
-    	echo "Invalid login";
-    	break;
-    		}
-	    }*/
-    
    	mysql_close($conn);
 ?>
