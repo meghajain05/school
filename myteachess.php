@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="hpage.css"/>
+</head>
+<body>
 <?php 
 $dbhost = 'localhost';
 	$dbuser = 'root';
@@ -18,7 +24,23 @@ $dbhost = 'localhost';
 	$retval3 = mysql_query( $sql3, $conn );
 	while($row = mysql_fetch_array($retval3)){
 		$teaching_essential=$row['Teaching_Essential'];
-		$teaching_essential_id=$row['Teaching_Essential_ID'];       
-       echo "Teaching Essential is: <br/>".$teaching_essential."&nbsp <br> and article id is: &nbsp".$teaching_essential_id."<br/><br/><br/><br/>" ; 	
+		$teaching_essential_id=$row['Teaching_Essential_ID']; 
+
+
+
+			echo '<div style="background-color: pink;"> Teaching Essential is: <br>'.$teaching_essential.'&nbsp <br> and its id is: &nbsp'.$teaching_essential_id.'<br/>
+       		<center>
+       		<a href="mytechcomment.php?value='.$teaching_essential_id.'"><button class="ca" style="width: 100px; height:30px;">Comment </button></a>
+       		</center>
+       		</div>';
+
+       echo "<br/><br/><br/><br/>";
+        	
+   		
    }
- ?>
+ ?> 
+</body>
+</html>
+
+
+   

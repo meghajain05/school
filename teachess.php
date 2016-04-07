@@ -1,5 +1,11 @@
-<?php 
-$dbhost = 'localhost';
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="hpage.css"/>
+</head>
+<body>
+	<?php 
+	$dbhost = 'localhost';
 	$dbuser = 'root';
 	$dbpass = 'root';
 	$conn = mysql_connect($dbhost, $dbuser, $dbpass);			//connection establish
@@ -18,7 +24,18 @@ $retval3 = mysql_query( $sql3, $conn );
 		$user=$row['U_Name'];
       $status=$row['Status'];
       if ($status==1) {
-       echo "Article is: <br/>".$teaching_essential."&nbsp <br> by &nbsp".$user."<br/><br/><br/><br/>" ;  
+       echo "Article is: <br/>".$teaching_essential."&nbsp <br> by &nbsp".$user."<br/><br/><br/><br/>" ; 
+
+       echo '<div style="background-color: pink;"> Teaching Essential is: <br>'.$teaching_essential.'&nbsp <br> by &nbsp'.$user.'<br/>
+       		<center>
+       		<a href="mytechcomment.php?value='.$teaching_essential_id.'"><button class="ca" style="width: 100px; height:30px;">Comment </button></a>
+       		</center>
+       		</div>';
+
+       echo "<br/><br/><br/><br/>";
+        	 
       }	
    }
  ?>
+</body>
+</html>
