@@ -19,9 +19,9 @@ $retval3 = mysql_query( $sql3, $conn );
        if($status==1){
           
        echo '<div style="background-color: pink;"> Teaching Essential is: <br>'.$teaching_essential.'&nbsp <br> by &nbsp'.$user.'<br/> The status is: Public<br/>
-       		<center>
+       		
        		<a href="../phppages/mytechcomment.php?value='.$teaching_essential_id.'">See More</a>
-       		</center>
+       		
        		</div>';
 
        echo "<br/><br/><br/><br/>";
@@ -29,9 +29,9 @@ $retval3 = mysql_query( $sql3, $conn );
       	}
         else{
           echo '<div style="background-color: pink;"> Teaching Essential is: <br>'.$teaching_essential.'&nbsp <br> by &nbsp'.$user.'<br/> The status is: Private<br/>
-          <center>
+          
           <a href="../phppages/mytechcomment.php?value='.$teaching_essential_id.'">See More</a>
-          </center>
+          
           </div>';
 
        echo "<br/><br/><br/><br/>";

@@ -7,18 +7,22 @@ include('../phppages/php.php');
     $phone=$_POST['phone'];
     $utype=$_POST['utype'];
 
-$emailErr = $nameErr = "";
-    $email = $username = "";
+$emailErr = $nameErr = $phoneErr = $passErr = "";
+    $email = $username = $phone = $password = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["username"])) {
+  if (empty($_POST['username'])) {
      $nameErr = "Name is required";
    } else {
-     $name = test_input($_POST["username"]);
+     $name = test_input($_POST['username']);
      // check if name only contains letters and whitespace
      if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
        $nameErr = "Only letters and white space allowed"; 
      }
    }
+   if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $_POST['password'])) {
+    $passErr = "the password does not meet the requirements!";
+}
+
   if (empty($_POST['email'])) {
        $emailErr = "Email is required";
       } 
@@ -29,6 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $emailErr = "Invalid email format"; 
        }
      }
+     if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone']))
+    {
+      $phoneErr = 'Invalid Number!';
+    }
  }
 
 

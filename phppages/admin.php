@@ -26,11 +26,11 @@ if(!isset($_SESSION['username1']))
 <div class="d">
 	<center>
 	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		<input class="ca" name="username" placeholder="&nbsp USERNAME"><span class="error"><?php echo $emailErr;?></span><br/>
-		<input class="ca" name="password" type="password" required="" placeholder="&nbsp PASSWORD"><br/>
+		<input class="ca" name="username" placeholder="&nbsp USERNAME"><span class="error"><?php echo $nameErr;?></span><br/>
+		<input class="ca" name="password" type="password" required="" placeholder="&nbsp PASSWORD"><span class="error"><?php echo $passErr;?></span><br/>
 		<input class="ca" name="email" placeholder="&nbsp E-Mail"><span class="error"><?php echo $emailErr;?></span>
    <br/>	
-		<input class="ca" name="phone" required="" placeholder="&nbsp PHONE NO"><br/>
+		<input class="ca" name="phone" required="" placeholder="&nbsp PHONE NO"><span class="error"><?php echo $phoneErr;?></span><br/>
 		<select class="ca" name="utype">
 			<option value="1">Admin</option>
     		<option value="2">Student</option>
