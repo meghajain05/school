@@ -19,7 +19,7 @@ include('../phppages/php.php');
 
 			echo '<div style="background-color: pink;"> Teaching Essential is: <br>'.$teaching_essential.'&nbsp <br> and its id is: &nbsp'.$teaching_essential_id.'<br/>
        		<center>
-       		<a href="../phppages/mytechcomment.php?value='.$teaching_essential_id.'"><button class="ca" style="width: 100px; height:30px;">Comment </button></a>
+       		<a href="../phppages/mytechcomment.php?value='.$teaching_essential_id.'">See More</a>
        		</center>
        		</div>';
 

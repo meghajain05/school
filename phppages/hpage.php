@@ -25,7 +25,7 @@
 	<center>
 	<form method="POST" action="">
 	<input class="ca" name="username1" placeholder="&nbsp USERNAME"><br/>
-	<input class="ca" name="password1" placeholder="&nbsp PASSWORD"><br/>
+	<input class="ca" name="password1" type="password" placeholder="&nbsp PASSWORD"><br/>
 	<button class="b3" id="b3" type="submit">SUBMIT</button>
 	<button class="b3" id="b4">BACK</button>
 	</form>

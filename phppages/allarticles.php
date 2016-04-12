@@ -12,24 +12,24 @@ $retval3 = mysql_query( $sql3, $conn );
   while($row = mysql_fetch_array($retval3)){
     $article=$row['Article'];
     $user=$row['U_Name'];
-      $article_id=$row['Article_Id']; 
-     
-         $status=$row['Status'];
-      
+    $article_id=$row['Article_Id']; 
+    $status=$row['Status'];     
        if($status==1){
 
-echo '<div style="background-color: pink;"> Article is: <br>'.$article.'&nbsp <br> by &nbsp'.$user.'<br/> The status is: Public<br/>
+  echo '<div style="background-color: pink;"> Article is: <br>'.$article.'&nbsp <br> by &nbsp'.$user.'<br/> The status is: Public<br/>
           <center>
-          <a href="../phppages/myartcomment.php?value='.$article_id.'"><button class="ca" style="width: 100px; height:30px;">Comment </button></a>
+          <a href="../phppages/myartcomment.php?value='.$article_id.'">See More</a> &nbsp &nbsp
+          <button class="ca" style="width: 100px; height:30px;">Delete</button>
           </center>
           </div>';
 
-       echo "<br/><br/><br/><br/>";
+  echo "<br/><br/><br/><br/>";
       }    
-      else{
+    else{
         echo '<div style="background-color: pink;"> Article is: <br>'.$article.'&nbsp <br> by &nbsp'.$user.'<br/> The status is: Private <br/>
           <center>
-          <a href="../phppages/myartcomment.php?value='.$article_id.'"><button class="ca" style="width: 100px; height:30px;">Comment </button></a>
+          <a href="../phppages/myartcomment.php?value='.$article_id.'">See More</a> &nbsp &nbsp
+          <button class="ca" style="width: 100px; height:30px;">Delete</button>
           </center>
           </div>';
 
@@ -37,6 +37,9 @@ echo '<div style="background-color: pink;"> Article is: <br>'.$article.'&nbsp <b
 
       }
    }
+
+  //$article_id = $_GET['value'];
+  //$sql8="DELETE FROM article WHERE Article_Id=$article_id"; 
  ?>
  </body>
 </html>

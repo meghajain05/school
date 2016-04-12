@@ -19,7 +19,7 @@ include('../phppages/php.php');
 		     
        echo '<div style="background-color: pink;"> Article is: <br>'.$article.'&nbsp <br> and article id is: &nbsp'.$article_id.'<br/>
        		<center>
-       		<a href="../phppages/myartcomment.php?value='.$article_id.'"><button class="ca" style="width: 100px; height:30px;">Comment </button></a>
+       		<a href="../phppages/myartcomment.php?value='.$article_id.'">See More</a>
        		</center>
        		</div>';
 
